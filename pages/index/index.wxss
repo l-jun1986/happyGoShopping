@@ -1,0 +1,105 @@
+/**index.wxss**/
+
+image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 搜索栏 */
+
+.search {
+  width: 750rpx;
+  box-sizing: border-box;
+  color: #ccc;
+  background-color: #ff2b49;
+  padding: 30rpx;
+  position: fixed;
+  top:0;
+  z-index: 99;
+}
+
+.search_in {
+  background-color: #fff;
+  width: 100%;
+  height: 50rpx;
+  margin: 0 auto;
+  border-radius: 8rpx;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 15rpx;
+}
+
+.search_in:focus {
+  cursor: text;
+}
+
+icon {
+  vertical-align: middle;
+}
+
+/* 轮播图 */
+
+swiper {
+  width: 750rpx;
+  height: 360rpx;
+  margin-top:120rpx;
+}
+
+/* 标签栏 */
+
+.tabs {
+  display: flex;
+  padding:5rpx 0 20rpx 0;
+}
+
+.tabs view {
+  padding:20rpx;
+  height: 180rpx;
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color:#666;
+}
+
+.space {
+  width: 100%;
+  flex: 1;
+}
+
+/* 展示区 */
+.title{
+  width: 100%;
+  height:65rpx;
+}
+
+.content{
+  padding:20rpx;
+  height:400rpx;
+}
+
+.content image{
+  width:31%;
+  float:left;
+  padding-right:10rpx;
+  height:49%;
+  margin-bottom:10rpx
+}
+.content image:first-child{
+  height: 100%
+}
+
+/* 按钮 */
+
+.button{
+  width:120rpx;
+  height:120rpx;
+  border-radius: 120rpx;
+  position: fixed;
+  bottom:100rpx;
+  right: 50rpx;
+  background-color: rgba(255,255,255,0.5);
+  text-align: center;
+  color:#999
+}

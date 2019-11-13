@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<!-- 搜索框 -->
+<view class="search">
+  <view class="search_in">
+    <icon type="search" size="20" />搜索</view>
+</view>
+
+<!-- 轮播图 -->
+<view class="swiper">
+  <swiper indicator-dots autoplay indicator-active-color="#fff" interval="2000" duration="500" circular>
+    <swiper-item wx:for="{{swiper}}" wx:key="goods_id">
+      <image src="{{item.image_src}}" mode="widthfix"></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- 标签栏 -->
+<view class="tabs">
+  <view class="cate" wx:for="{{cate}}" wx:key="*this">
+    <image src="{{item.image_src}}" mode="aspectFit">{{item.name}}</image>
+  </view>
+</view>
+
+<!-- 展示区 -->
+<view class="list">
+  <view class="goods" wx:for="{{goods}}" wx:key="*this">
+    <view class="title">
+      <image src="{{item.floor_title.image_src}}"></image>
+    </view>
+    <view class="content">
+      <block wx:for="{{item.product_list}}" wx:for-item="products" wx:key="*this">
+        <image src="{{products.image_src}}" mode="widthfix"></image>
+      </block>
+    </view>
+  </view>
+</view>
+
+<!-- 返回顶部按钮 -->
+<view class="button" bindtap="toTop">
+  <image src="/assets/images/arrow-up.png" style="height:50rpx;width:50rpx;"></image>
+  <view style="font-size:30rpx;">顶部</view>
+</view>

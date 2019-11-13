@@ -1,0 +1,107 @@
+/* pages/cate/cate.wxss */
+
+/* 搜索栏 */
+
+.search {
+  width: 750rpx;
+  box-sizing: border-box;
+  color: #ccc;
+  background-color: #ff2b49;
+  padding: 30rpx;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
+.search_in {
+  background-color: #fff;
+  width: 100%;
+  height: 50rpx;
+  margin: 0 auto;
+  border-radius: 8rpx;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 15rpx;
+}
+
+.search_in:focus {
+  cursor: text;
+}
+
+icon {
+  vertical-align: middle;
+}
+
+/* 左边栏 */
+
+.left {
+  height: 936rpx;
+}
+
+.cate1 {
+  width: 200rpx;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #ddd;
+  background-color: #eee;
+  box-sizing: border-box;
+}
+
+.cate1 .text {
+  padding: 10rpx;
+  font-weight: 600;
+  font-size: 33rpx;
+  color: #444;
+  text-align: center;
+}
+
+.active {
+  background-color: #fff;
+}
+
+.active1 {
+  border-left: 5px solid #ff2b49;
+  color: #ff2b49 !important;
+}
+
+/* 展示区 */
+
+.right {
+  position: fixed;
+  top: 120rpx;
+  right: 0;
+  width: 550rpx;
+  z-index: 10;
+  height: 936rpx;
+}
+
+.right .top {
+  background-color: #eee;
+  text-align: center;
+  padding: 31rpx;
+  color: #444;
+}
+
+.right .top text {
+  color: #ccc;
+}
+
+.right .brandsView {
+  overflow: hidden;
+}
+
+.right .brandsView .brands{
+float:left;
+padding:30rpx;
+height:145rpx;
+}
+
+.right .brandsView .brands image {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.right .brandsView .brands .name{
+  text-align: center;
+  font-size: 28rpx;
+  width: 120rpx;
+}

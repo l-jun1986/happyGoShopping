@@ -1,0 +1,33 @@
+<!--pages/cate/cate.wxml-->
+<!-- 搜索栏 -->
+<view class="search">
+  <view class="search_in">
+    <icon type="search" size="20" />搜索</view>
+</view>
+
+<view style="margin-top:120rpx;" class="content">
+  <!-- 侧边栏 -->
+  <scroll-view class="left" scroll-y scroll-with-animation>
+    <view wx:for="{{cate}}" wx:key="item.cat_id" class="{{num==item.cat_id?'active':''}} cate1" capture-catch:tap="active" data-num="{{item.cat_id}}">
+      <view class="{{num==item.cat_id?'active1':''}} text">
+        {{item.cat_name}}
+      </view>
+      <!-- 品牌展示 -->
+      <scroll-view class="right" scroll-y scroll-with-animation wx:if="{{num==item.cat_id?1:0}}">
+        <view wx:for="{{item.children}}" wx:for-item="cate2" wx:key="*this" scroll-y>
+          <view class="top">
+            <text decode>/&nbsp;&nbsp;&nbsp;</text> {{cate2.cat_name}}
+            <text decode>&nbsp;&nbsp;&nbsp;/</text>
+          </view>
+          <view class="brandsView">
+            <view class="brands" wx:for="{{cate2.children}}" wx:key wx:for-item="cate3" data-name="{{cate3.cat_name}}" catchtap="toSearch">
+              <image src="{{cate3.cat_icon}}" mode="aspectFit"></image>
+              <view class="name">{{cate3.cat_name}}</view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </scroll-view>
+
+</view>
