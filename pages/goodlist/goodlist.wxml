@@ -1,0 +1,7 @@
+<!--pages/goodlist/goodlist.wxml-->
+<search></search>
+
+<!-- 标签栏 -->
+<view class="tab">
+  <view wx:for="{{tab}}" wx:key="index" class="{{currenttab==index?'active':''}}" data-num="{{index}}" bindtap="change">{{item}}</view>
+</view>

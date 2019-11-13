@@ -1,9 +1,6 @@
 <!--index.wxml-->
 <!-- 搜索框 -->
-<view class="search">
-  <view class="search_in">
-    <icon type="search" size="20" />搜索</view>
-</view>
+<search></search>
 
 <!-- 轮播图 -->
 <view class="swiper">

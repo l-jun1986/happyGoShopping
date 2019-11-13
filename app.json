@@ -3,8 +3,11 @@
     "pages/cate/cate",
     "pages/index/index",
     "pages/logs/logs",
+    "pages/personal/personal",
+    "pages/search/search",
     "pages/shopcart/shopcart",
-    "pages/personal/personal"
+    "pages/goodlist/goodlist",
+    "pages/shopcart/chooseAddress/chooseAddress"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -13,33 +16,35 @@
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
-    "color":"#999",
+    "color": "#999",
     "selectedColor": "#ff2b49",
     "borderStyle": "white",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "assets/images/tab/shouye.png",
-      "selectedIconPath": "assets/images/tabRed/shouyefill.png"
-    },
-    {
-      "pagePath": "pages/cate/cate",
-      "text": "分类",
-      "iconPath": "assets/images/tab/danpin.png",
-      "selectedIconPath": "assets/images/tabRed/danpin.png"
-    },
-    {
-      "pagePath": "pages/shopcart/shopcart",
-      "text": "购物车",
-      "iconPath": "assets/images/tab/gouwuche.png",
-      "selectedIconPath": "assets/images/tabRed/gouwuchefill.png"
-    },
-    {
-      "pagePath": "pages/personal/personal",
-      "text": "我的",
-      "iconPath": "assets/images/tab/yonghu.png",
-      "selectedIconPath": "assets/images/tabRed/wodefill.png"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/images/tab/shouye.png",
+        "selectedIconPath": "assets/images/tabRed/shouyefill.png"
+      },
+      {
+        "pagePath": "pages/cate/cate",
+        "text": "分类",
+        "iconPath": "assets/images/tab/danpin.png",
+        "selectedIconPath": "assets/images/tabRed/danpin.png"
+      },
+      {
+        "pagePath": "pages/shopcart/shopcart",
+        "text": "购物车",
+        "iconPath": "assets/images/tab/gouwuche.png",
+        "selectedIconPath": "assets/images/tabRed/gouwuchefill.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "assets/images/tab/yonghu.png",
+        "selectedIconPath": "assets/images/tabRed/wodefill.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

@@ -20,6 +20,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showLoading({
+      title: '加载中',
+    })
     // 获取轮播图数据
     wx.request({
       url: 'https://api.zbztb.cn/api/public/v1/home/swiperdata',
@@ -29,6 +32,7 @@ Page({
           {swiper:res.data.message}
         )
         console.log(this.data.swiper)
+        wx.hideLoading()
       }
     })
 

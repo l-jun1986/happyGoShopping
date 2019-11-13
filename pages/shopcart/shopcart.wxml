@@ -1,2 +1,9 @@
 <!--pages/shopcart/shopcart.wxml-->
-<text>pages/shopcart/shopcart.wxml</text>
+ <functional-page-navigator
+    name="chooseAddress"
+    version="develop"
+    bind:success="onSuccess"
+    bind:fail="onFail"
+  >
+    <button>选择收货地址</button>
+  </functional-page-navigator>

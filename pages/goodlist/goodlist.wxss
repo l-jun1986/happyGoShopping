@@ -1,0 +1,23 @@
+/* pages/goodlist/goodlist.wxss */
+
+/* tab栏 */
+.tab{
+  display: flex;
+}
+
+.tab view{
+  flex:1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:35rpx;
+  font-size: 35rpx;
+  color:#666;
+  border-bottom: 1px solid #888;
+}
+
+.active{
+  border-bottom:2px solid #ff2b49!important;
+  color:#ff2b49!important;
+  font-weight: bold
+}
