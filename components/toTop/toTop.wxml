@@ -1,0 +1,6 @@
+<!--components/toTop/toTop.wxml-->
+<view class="toTop" bindtap="toTop">
+  <image src="/assets/images/arrow-up.png" style="height:30rpx;width:30rpx;"></image>
+  <view style="font-size:20rpx;">顶部</view>
+</view>
+

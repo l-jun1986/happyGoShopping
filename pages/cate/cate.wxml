@@ -19,7 +19,7 @@
         <text decode>&nbsp;&nbsp;&nbsp;/</text>
       </view>
       <view class="brandsView">
-        <view class="brands" wx:for="{{item.children}}" wx:key wx:for-item="item2" data-name="{{item2.cat_name}}" catchtap="toList">
+        <view class="brands" wx:for="{{item.children}}" wx:key wx:for-item="item2" data-name="{{item2.cat_name}}" data-cid="{{item2.cat_id}}" catchtap="toList">
           <image src="{{item2.cat_icon}}" mode="aspectFit"></image>
           <view class="name">{{item2.cat_name}}</view>
         </view>

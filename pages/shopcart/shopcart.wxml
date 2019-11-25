@@ -1,9 +1,59 @@
 <!--pages/shopcart/shopcart.wxml-->
- <functional-page-navigator
-    name="chooseAddress"
-    version="develop"
-    bind:success="onSuccess"
-    bind:fail="onFail"
-  >
-    <button>选择收货地址</button>
-  </functional-page-navigator>
+<view class="address" bindtap='address'>
+  <view class='text' wx:if="{{!address.user}}">选择收货地址</view>
+  <view class='myaddress' wx:if="{{address.user}}">
+    <text decode>收货人：{{address.user}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text><text>电话：{{address.tel}}</text>
+    <view>收货地址：{{address.address}}</view>
+  </view>
+</view>
+
+<!-- 购物车 -->
+<view class="list" wx:if="{{goods.length!==0}}">
+  <text>优购生活馆</text>
+  <view class='content' wx:for="{{goods}}" wx:key="goods_id" wx:if="{{goods.length!==0}}">
+    <view class='checkbox'>
+      <view class="check {{item.chosen?'checked':''}}" bindtap="add" data-idx="{{index}}">
+        <image src="{{item.chosen?'/assets/images/gou.svg':'/assets/images/kong.svg'}}"></image>
+      </view>
+      <view class="delete" bindtap='del' data-idx="{{index}}">
+        <image src="../../assets/images/shanchu.svg"></image>
+      </view>
+    </view>
+    <view class='img' bindtap="toDetail" data-goods_id='{{item.goods_id}}'>
+      <image src="{{item.pic}}"></image>
+    </view>
+    <view class='info' >
+      <view class='name' bindtap="toDetail" data-goods_id='{{item.goods_id}}'>{{item.name}}</view>
+      <view class='num'>
+        <view class='price'>￥{{item.goods_price}}</view>
+        <view class='amount'>
+          <view class='reduce' bindtap='reduce' data-idx="{{index}}">-</view>
+          <view decode class='number'>{{item.goods_number}}</view>
+          <view class='increase' bindtap='increase' data-idx="{{index}}">+</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 空购物车 -->
+<view class='empty' wx:if="{{goods.length===0}}">
+  <image src="/assets/images/emptycart.svg"></image>
+  <navigator class='toIndex' url="/pages/index/index" open-type="switchTab">购物车空空如也，去逛逛>>></navigator>
+</view>
+
+<!-- 填充 -->
+<view class='space'></view>
+
+<!-- 结算栏 -->
+<view class="account">
+  <view class="checkAll" bindtap="checkAll">
+    <view class='checkbtn {{checkAll?"active":""}}'>
+      <image src="{{checkAll?'/assets/images/gou.svg':'/assets/images/kong.svg'}}"></image>
+    </view>
+    全选
+  </view>
+  <view class="total">
+    <text>合计：</text>￥ {{total}}</view>
+  <view class="toPay" bindtap="toPay">结算（{{num}})</view>
+</view>

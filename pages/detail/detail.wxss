@@ -1,0 +1,106 @@
+/* pages/detail/detail.wxss */
+
+/* 轮播图 */
+image{
+  width:100%;
+  height:100%;
+}
+
+.swiper{
+  margin: 0 auto;
+  width:600rpx;
+  height:600rpx;
+}
+
+/* info */
+.info{
+  width:100%;
+  padding-bottom:30rpx;
+  background-color:#eee;
+}
+
+.info text{
+  display: block;
+  box-sizing: border-box;
+  width:100%;
+  padding:30rpx;
+  background-color:#fff;
+  color:#ff2b49;
+  font-weight: bold;
+  font-size: 40rpx;
+}
+
+.info .name{
+display: flex;
+}
+
+.info .name .left{
+flex:1;
+border-right:1px solid #ccc;
+color:#666;
+background-color:#fff;
+padding:0 50rpx 10rpx 10rpx;
+}
+
+.info .name .fav{
+  padding:20rpx 50rpx;
+  background-color: #fff;
+  text-align: center;
+  color:#666
+}
+
+.info .name .fav image{
+  width:50rpx;
+  height:50rpx;
+}
+
+/* 工具栏 */
+.tools{
+  width:100%;
+  display: flex;
+  position: fixed;
+  bottom: 1rpx;
+}
+
+.service,.share,.shopcart{
+  flex:3;
+  border-top:1px solid #ddd;
+  box-sizing: border-box;
+  text-align: center;
+  background-color:#fff;
+  padding:10rpx;
+  font-size: 24rpx;
+  position: relative;
+}
+
+button{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width:100%!important;
+  height: 100%;
+  opacity: 0;
+}
+
+.service image,.share image,.shopcart image{
+ width:30rpx;
+ height:30rpx;
+}
+
+.addcart,.buy{
+  flex:4;
+  color:#fff;
+  font-size:30rpx;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addcart{
+  background-color: #ffb517;
+}
+
+.buy{
+  background-color: #ff2b49;
+}

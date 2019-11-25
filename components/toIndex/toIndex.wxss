@@ -1,0 +1,12 @@
+/* components/toIndex/toIndex.wxss */
+.toIndex{
+  width:80rpx;
+  height:80rpx;
+  border-radius: 80rpx;
+  position:fixed;
+  top:10rpx;
+  left: 10rpx;
+  background-color: rgba(255,255,255,0.5);
+  text-align: center;
+  color:#999
+}

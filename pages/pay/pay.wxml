@@ -1,0 +1,39 @@
+<!-- 地址信息 -->
+<view class='address'>
+  <text decode>收货人：{{address.user}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+  <text>电话：{{address.tel}}</text>
+  <view>收货地址：{{address.address}}</view>
+</view>
+
+<!-- 商品信息 -->
+<view class="list">
+  <text>购物车</text>
+  <view class='content' wx:for="{{goodsData}}" wx:key="goods_id">
+    <view class='img' bindtap="toDetail" data-goods_id='{{item.goods_id}}'>
+      <image src="{{item.pic}}"></image>
+    </view>
+    <view class='info'>
+      <view class='name' bindtap="toDetail" data-goods_id='{{item.goods_id}}'>{{item.name}}</view>
+      <view class='num'>
+        <view class='price'>￥{{item.goods_price}}</view>
+        <view class='amount'>
+          <view decode class='number'>X{{item.goods_number}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 填充 -->
+<view class='space'></view>
+
+<!-- 结算栏 -->
+<view class="account">
+  <view class="space2"></view>
+  <view class="total">
+    <text>合计：</text>￥ {{total}}</view>
+  <view class="toBill" >
+    <view bindtap="createBill">支付（{{num}})</view>
+    <button open-type="getUserInfo" class='getInfo' bindgetuserinfo='getUserInfo' wx:if="{{!token}}">授权支付</button>
+  </view>
+</view>

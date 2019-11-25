@@ -1,23 +1,63 @@
 /* pages/goodlist/goodlist.wxss */
 
 /* tab栏 */
-.tab{
+
+.tab {
   display: flex;
 }
 
-.tab view{
-  flex:1;
+.tab view {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding:35rpx;
+  padding: 30rpx;
   font-size: 35rpx;
-  color:#666;
-  border-bottom: 1px solid #888;
+  color: #666;
+  border-bottom: 1px solid #ccc;
 }
 
-.active{
-  border-bottom:2px solid #ff2b49!important;
-  color:#ff2b49!important;
-  font-weight: bold
+.active {
+  border-bottom: 2px solid #ff2b49 !important;
+  color: #ff2b49 !important;
+  font-weight: bold;
+}
+
+/* 展示列表 */
+
+.goods {
+  display: flex;
+  border-bottom: 1px solid #eee;
+}
+
+.img {
+  padding: 30rpx 45rpx;
+}
+
+.img image {
+  width: 210rpx;
+  height: 190rpx;
+  background-color: #eee;
+}
+
+.info {
+  flex: 1;
+  padding: 30rpx 0;
+}
+
+.info view {
+  width: 380rpx;
+  height: 80rpx;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-bottom: 40rpx;
+}
+
+.info text {
+  color: #ff2b49;
+  font-size: 40rpx;
 }

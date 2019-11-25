@@ -1,1 +1,47 @@
 /* pages/search/search.wxss */
+
+/* 搜索列表 */
+
+.result {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 30rpx 40rpx;
+  border-bottom: 2px solid #ccc;
+  font-size: 36rpx;
+  color: #666;
+  background-color: #eee;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* 历史记录 */
+
+.history {
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.dispear {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.box {
+  margin-top:30rpx;
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.box .item {
+  background-color: #eee;
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 6rpx 20rpx;
+  border-radius: 20rpx;
+  margin: 20rpx;
+}

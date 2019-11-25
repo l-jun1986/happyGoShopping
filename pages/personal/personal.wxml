@@ -1,2 +1,56 @@
-<!--pages/personal/personal.wxml-->
-<text>pages/personal/personal.wxml</text>
+<!-- 头像 -->
+<view class='header'>
+  <image src="{{rawData.avatarUrl}}" class='blur' mode='aspectFill'>
+  </image>
+  <image class='photo' src="{{rawData.avatarUrl}}"></image>
+  <text>{{rawData.nickName}}</text>
+</view>
+
+<!-- 订单 -->
+<view class='order'>
+  <view class='myOrder'>我的订单</view>
+  <view class='cate' bindtap="toOrder">
+    <view>
+      <image src="../../assets/images/icon-.svg"></image>
+      <view>全部订单</view>
+    </view>
+    <view>
+      <image src="../../assets/images/zhifu.svg"></image>
+      <view>待付款</view>
+    </view>
+    <view>
+      <image src="../../assets/images/wuliu.svg"></image>
+      <view>待收货</view>
+    </view>
+    <view>
+      <image src="../../assets/images/tuihuo.svg"></image>
+      <view>退款/退货</view>
+    </view>
+  </view>
+</view>
+
+<!-- 客服 -->
+<view class='service'>
+  <view bindtap="call">
+    <view>联系客服</view>
+    <view>400-618-4000</view>
+  </view>
+  <view>
+    <button open-type="feedback"></button>
+    <view>意见反馈</view>
+    <view>></view>
+  </view>
+  <view>
+    <view>关于我们</view>
+    <view>></view>
+  </view>
+</view>
+
+<!-- 反馈 -->
+<view class='share'>
+  <button open-type="share"></button>
+  <view>把应用推荐给其他人</view>
+  <view>></view>
+</view>
+<!-- 填充 -->
+<view class='space'></view>

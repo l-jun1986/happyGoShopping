@@ -8,7 +8,7 @@ scroll-view{
 /* 左边栏 */
 
 .left {
-  height: 936rpx;
+  height:calc(100vh - 200rpx);
 }
 
 .cate1 {
@@ -41,7 +41,7 @@ scroll-view{
 .right {
   flex:1;
   z-index: 10;
-  height: 936rpx;
+  height: calc(100vh - 200rpx);
 }
 
 .right .top {

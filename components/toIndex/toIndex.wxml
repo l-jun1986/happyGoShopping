@@ -1,0 +1,6 @@
+<!--components/toIndex/toIndex.wxml-->
+<view class="toIndex" bindtap="toIndex">
+  <image src="/assets/images/arrow-up.png" style="height:30rpx;width:30rpx;"></image>
+  <view style="font-size:20rpx;">首页</view>
+</view>
+

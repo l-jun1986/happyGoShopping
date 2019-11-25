@@ -1,0 +1,25 @@
+<!--pages/order/order.wxml-->
+<!-- 标签栏 -->
+<view class="tab">
+  <view wx:for="{{tab}}" wx:key="index" class="{{type==index+1?'active':''}}" data-num="{{index+1}}" bindtap="change">{{item}}</view>
+</view>
+
+<!-- 订单列表 -->
+<view class="order" wx:for="{{orders}}" wx:key>
+  <view class="number">
+    <view class="text">订单编号</view>
+    <view>{{item.order_number}}</view>
+  </view>
+  <view class="price">
+    <view class="text">订单价格</view>
+    <view class="value">￥{{item.order_price}}</view>
+  </view>
+  <view class="date">
+    <view class="text">订单日期</view>
+    <view class="date1">{{item.create_time}}</view>
+  </view>
+  <view class='btn' wx:if='{{type!==1}}'>
+  <view class='nopay' wx:if='{{type===2}}'>去支付</view>
+  <view class='nosend' wx:if='{{type===3}}'>看物流</view>
+  </view>
+</view>

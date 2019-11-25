@@ -7,7 +7,12 @@
     "pages/search/search",
     "pages/shopcart/shopcart",
     "pages/goodlist/goodlist",
-    "pages/shopcart/chooseAddress/chooseAddress"
+    "pages/shopcart/chooseAddress/chooseAddress",
+    "pages/detail/detail",
+    "components/toTop/toTop",
+    "pages/pay/pay",
+    "components/toIndex/toIndex",
+    "pages/order/order"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "mp-gallery":"/components/gallery/gallery/gallery",
+    "toTop":"/components/toTop/toTop",
+    "toIndex":"/components/toIndex/toIndex"
+  },
+  "navigationBarTitleText": "商品详情"
+}

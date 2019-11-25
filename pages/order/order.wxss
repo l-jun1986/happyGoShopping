@@ -1,0 +1,62 @@
+/* tab栏 */
+
+.tab {
+  display: flex;
+}
+
+.tab view {
+  flex: 1;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30rpx 0;
+  font-size: 35rpx;
+  color: #666;
+  border-bottom: 1px solid #ccc;
+}
+
+.active {
+  border-bottom: 2px solid #ff2b49 !important;
+  color: #ff2b49 !important;
+  font-weight: bold;
+}
+
+/* 订单列表 */
+
+.order {
+  color: #999;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
+}
+
+.number, .price, .date {
+  display: flex;
+  padding-bottom: 10rpx;
+}
+
+.order .number .text, .price .text, .date .text {
+  flex: 1;
+}
+
+.order .price .value {
+  color: #ff2b49;
+  font-weight: bold;
+}
+
+.order .date .date1 {
+  color: #333;
+}
+
+.btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nopay, .nosend {
+  width: fit-content;
+  border: 1px solid #ccc;
+  padding: 15rpx;
+}

@@ -1,4 +1,20 @@
 <!--pages/search/search.wxml-->
-    <view class="searchbar">
-        <mp-searchbar bindselectresult="selectResult" search="{{search}}"></mp-searchbar>
-    </view>
+<view class="searchbar">
+  <mp-searchbar bindinput="change" cancel="" bindclear='clear'></mp-searchbar>
+</view>
+
+<!-- 搜索数据展示 -->
+
+<view class="result" wx:for="{{result}}" wx:key="goods_id" data-goods_id="{{item.goods_id}}" bindtap="toDetail">
+  {{item.goods_name}}
+</view>
+
+<!-- 历史记录 -->
+<view class="history {{result.length===0?'':'dispear'}}">
+  <view>历史记录</view>
+  <view class="box">
+  <view class='item' wx:for="{{history}}" data-value='{{item}}' bindtap="choose" wx:key>
+    {{item}}
+  </view>
+  </view>
+</view>

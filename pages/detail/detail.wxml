@@ -1,0 +1,58 @@
+<!--pages/detail/detail.wxml-->
+<!-- 轮播图 -->
+<view>
+  <swiper indicator-dots="{{goodsData.pics.length}}" autoplay interval="{{2000}}" duration="{{500}}" circular class="swiper" bindtap="showGal">
+    <block wx:for="{{goodsData.pics.length==0?1:goodsData.pics}}" wx:key="">
+      <swiper-item>
+        <image src="{{item.pics_mid||'../../assets/images/-crocodile.svg'}}" mode="aspectFill"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!-- 画廊 -->
+<view>
+  <mp-gallery imgUrls="{{pics}}" show="{{galshow}}" current="{{current}}" delete="" hideOnClick hide="hideGal"></mp-gallery>
+</view>
+
+<!-- 信息 -->
+<view class="info">
+  <text>￥{{goodsData.goods_price}}</text>
+  <view class="name">
+    <view class="left">
+      {{goodsData.goods_name}}
+    </view>
+    <view class="fav" bindtap="addFav">
+      <image src="{{like?'/assets/images/redstar.svg':'/assets/images/star.svg'}}"></image>
+      <view>收藏</view>
+    </view>
+  </view>
+</view>
+
+<!-- 详情 -->
+<rich-text nodes="{{goodsData.goods_introduce}}"></rich-text>
+
+<!-- 工具栏 -->
+<view class="tools">
+  <view class="service">
+    <image src="/assets/images/kefu.svg"></image>
+    <view>联系客服</view>
+    <button open-type="contact"></button>
+  </view>
+  <view class="share">
+    <image src="/assets/images/fenxiang.svg"></image>
+    <view>分享</view>
+    <button open-type="share"></button>
+  </view>
+  <view class="shopcart" bindtap="tocart">
+    <image src="/assets/images/gouwuche.svg"></image>
+    <view>购物车</view>
+  </view>
+  <view class="addcart" bindtap="addcart">加入购物车</view>
+  <view class="buy" bindtap="buy">立即购买</view>
+</view>
+
+<!-- 填充 -->
+<view style="width:100%;height:200rpx;"></view>
+<!-- 回顶按钮 -->
+<toIndex></toIndex>
+<toTop></toTop>

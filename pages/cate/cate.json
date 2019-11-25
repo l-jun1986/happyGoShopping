@@ -2,7 +2,7 @@
   "usingComponents": {
     "search":"/components/search/search"
   },
-  "navigationBarTitleText": "商品分栏",
+  "navigationBarTitleText": "商品分类",
   "enablePullDownRefresh": true,
   "backgroundTextStyle": "dark"
 }

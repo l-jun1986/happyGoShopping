@@ -5,3 +5,16 @@
 <view class="tab">
   <view wx:for="{{tab}}" wx:key="index" class="{{currenttab==index?'active':''}}" data-num="{{index}}" bindtap="change">{{item}}</view>
 </view>
+
+<!-- 展示列表 -->
+<view class="goods" wx:for="{{goodsData}}" wx:key="goods_id" bindtap="toDetail" data-goods_id="{{item.goods_id}}">
+  <view class="img">
+    <image src="{{item.goods_big_logo?item.goods_big_logo:'/assets/images/-crocodile.svg'}}"></image>
+  </view>
+  <view class="info">
+    <view>{{item.goods_name}}</view>
+    <text>￥ {{item.goods_price}}</text>
+  </view>
+</view>
+
+<toTop></toTop>

@@ -1,1 +1,231 @@
 /* pages/shopcart/shopcart.wxss */
+
+page {
+  background-color: #eee;
+}
+
+image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 收货地址 */
+
+.address {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 30rpx;
+  background-color: #fff;
+  margin-bottom: 40rpx;
+}
+
+.address .text {
+  padding: 20rpx;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  font-weight: bold;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.myaddress {
+  width: 100%;
+  margin-top: 30rpx;
+  background-color: #fff;
+}
+
+/* 购物车 */
+
+.list {
+  background-color: #fff;
+  margin-top: 40rpx;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.list text {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20rpx;
+  font-size: 30rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.list .content {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  padding: 20rpx;
+}
+
+.list .content .checkbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.list .content .check {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 40rpx;
+  font-size: 36rpx;
+  color: #fff;
+  text-align: center;
+}
+
+.list .content .delete {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.list .content .delete image {
+  width: 100%;
+  height: 100%;
+}
+
+.list .content .img {
+  width: 220rpx;
+  height: 220rpx;
+  padding: 0 10rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.list .content .img image {
+  width: 100%;
+  height: 100%;
+}
+
+.list .content .info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+}
+
+.list .content .info .name {
+  margin-top: 20rpx;
+  box-sizing: border-box;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 32rpx;
+}
+
+.list .content .info .num {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10rpx;
+  box-sizing: border-box;
+  font-size: 32rpx;
+}
+
+.list .content .info .num .price {
+  color: #ff2b49;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.list .content .info .num .amount {
+  display: flex;
+}
+
+.increase, .reduce {
+  width: 30rpx;
+  height: 30rpx;
+  border: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10rpx;
+}
+
+/* 空车 */
+
+.empty {
+  width: 100%;
+  padding: 50rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty image {
+  width: 400rpx;
+  height: 400rpx;
+  margin: 50rpx 0;
+}
+
+.empty .toIndex {
+  box-sizing: border-box;
+  padding: 30rpx;
+  border: 1px dashed #ccc;
+  border-radius: 100rpx;
+  background-color: #eee;
+  color: #666;
+}
+
+/* 结算栏 */
+
+.account {
+  box-sizing: border-box;
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  font-size: 36rpx;
+}
+
+.account .checkAll {
+  flex: 1;
+  padding: 20rpx;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.account .checkbtn {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 40rpx;
+  text-align: center;
+  color: #fff;
+  margin-right: 20rpx;
+}
+
+.account .total {
+  padding: 20rpx;
+  color: #ff2b49;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.account .total text {
+  color: #333;
+  font-weight: 400;
+}
+
+.account .toPay {
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
+  text-align: center;
+  background-color: #ff2b49;
+  color: #fff;
+}
+
+/* 填充 */
+
+.space {
+  width: 100%;
+  height: 200rpx;
+}

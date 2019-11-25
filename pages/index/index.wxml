@@ -3,7 +3,7 @@
 <search></search>
 
 <!-- 轮播图 -->
-<view class="swiper">
+<view class="swiper" bindtap="tocate">
   <swiper indicator-dots autoplay indicator-active-color="#fff" interval="2000" duration="500" circular>
     <swiper-item wx:for="{{swiper}}" wx:key="goods_id">
       <image src="{{item.image_src}}" mode="widthfix"></image>
@@ -12,14 +12,14 @@
 </view>
 
 <!-- 标签栏 -->
-<view class="tabs">
+<view class="tabs" bindtap="tocate">
   <view class="cate" wx:for="{{cate}}" wx:key="*this">
     <image src="{{item.image_src}}" mode="aspectFit">{{item.name}}</image>
   </view>
 </view>
 
 <!-- 展示区 -->
-<view class="list">
+<view class="list" bindtap="tocate">
   <view class="goods" wx:for="{{goods}}" wx:key="*this">
     <view class="title">
       <image src="{{item.floor_title.image_src}}"></image>
@@ -32,8 +32,4 @@
   </view>
 </view>
 
-<!-- 返回顶部按钮 -->
-<view class="button" bindtap="toTop">
-  <image src="/assets/images/arrow-up.png" style="height:50rpx;width:50rpx;"></image>
-  <view style="font-size:30rpx;">顶部</view>
-</view>
+<toTop></toTop>
